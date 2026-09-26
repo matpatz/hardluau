@@ -1,7 +1,8 @@
 -- deprecated-attribute.luau
--- @deprecated attribute marks an API as deprecated; using it emits a warning.
+-- @deprecated marks an API as deprecated; the linter warns when it's called
+-- (an analyzer lint, not a runtime error).
 
---!nonstrict
+--!strict
 
 @deprecated
 local function oldApi()

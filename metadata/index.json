@@ -44,6 +44,13 @@
       "description": "Interpolated strings with nested braces and format specifiers."
     },
     {
+      "file": "src/syntax/strings/string-interpolation-calls.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["strings", "interpolation", "functions"],
+      "description": "Function calls (zero-arg, multi-arg, nested) inside interpolated strings."
+    },
+    {
       "file": "src/syntax/strings/unicode-in-strings.luau",
       "category": "syntax",
       "difficulty": "easy",
@@ -98,6 +105,13 @@
       "difficulty": "medium",
       "tags": ["functions", "calls", "sugar"],
       "description": "String/table call sugar and method calls that parsers commonly confuse."
+    },
+    {
+      "file": "src/syntax/functions/long-bracket-call-sugar.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["functions", "calls", "sugar", "long-brackets"],
+      "description": "String call sugar with long-bracket strings and a block comment inside a function body."
     },
     {
       "file": "src/syntax/functions/multiple-returns-truncation.luau",
@@ -244,7 +258,7 @@
       "category": "formatting-extremes",
       "difficulty": "easy",
       "tags": ["formatting", "minified"],
-      "description": "A valid program with all non-essential whitespace removed."
+      "description": "All non-essential whitespace removed."
     },
     {
       "file": "src/formatting-extremes/maximal-whitespace.luau",
@@ -258,7 +272,7 @@
       "category": "formatting-extremes",
       "difficulty": "easy",
       "tags": ["formatting", "line-endings"],
-      "description": "A valid program mixing LF and CRLF line endings."
+      "description": "Mixes LF and CRLF line endings."
     },
     {
       "file": "src/formatting-extremes/extreme-line-length.luau",
@@ -272,42 +286,42 @@
       "category": "roblox",
       "difficulty": "hard",
       "tags": ["roblox", "networking", "http", "spy"],
-      "description": "Runtime network monitor that intercepts Roblox engine traffic."
+      "description": "Remote spy that intercepts Roblox engine network traffic."
     },
     {
       "file": "src/roblox/Dex++.luau",
       "category": "roblox",
       "difficulty": "hard",
       "tags": ["roblox", "explorer", "debugging"],
-      "description": "Revival of Moon's Dex with an object explorer and cloneref handling."
+      "description": "Game explorer — a revival of Moon's Dex with an object explorer and cloneref handling."
     },
     {
       "file": "src/roblox/Dex.luau",
       "category": "roblox",
       "difficulty": "hard",
       "tags": ["roblox", "explorer", "debugging"],
-      "description": "Full debugging suite: object explorer, properties, script viewer, and notebook."
+      "description": "Game explorer with object explorer, properties, script viewer, and notebook."
     },
     {
       "file": "src/roblox/infiniteyield.luau",
       "category": "roblox",
       "difficulty": "hard",
       "tags": ["roblox", "admin", "commands"],
-      "description": "All-in-one admin command suite with executor-agnostic fallback shims."
+      "description": "All-in-one admin command suite"
     },
     {
       "file": "src/roblox/Ketamine.luau",
       "category": "roblox",
       "difficulty": "hard",
       "tags": ["roblox", "debugging", "spy", "ui"],
-      "description": "Scriptify-generated debug suite with remote/event/HTTP spies and a memory scanner."
+      "description": "Remote spy suite with remote/event/HTTP spies and a memory scanner."
     },
     {
       "file": "src/roblox/simplespy.luau",
       "category": "roblox",
       "difficulty": "medium",
       "tags": ["roblox", "remotes", "hooks"],
-      "description": "Hooks remote events and functions to log arguments and return values."
+      "description": "Remote spy that hooks remote events and functions to log arguments and return values."
     },
     {
       "file": "src/roblox/Slayers2.luau",
@@ -321,14 +335,42 @@
       "category": "roblox",
       "difficulty": "medium",
       "tags": ["roblox", "executor", "security"],
-      "description": "Sweeps risky engine services, commonly used for executor detection and cleanup."
+      "description": "Game explorer that sweeps risky engine services, commonly used for executor detection and cleanup."
     },
     {
-      "file": "src/detections/check-game.luau",
+      "file": "src/detections/color3-hex.luau",
       "category": "detections",
-      "difficulty": "trivial",
-      "tags": ["detection", "environment", "runtime"],
-      "description": "Probes for the game global to tell Roblox apart from Lune or the luau CLI."
+      "difficulty": "easy",
+      "tags": ["detection", "roblox", "color3"],
+      "description": "Checks Color3.fromRGB(255, 128, 0):ToHex() returns \"ff8000\"."
+    },
+    {
+      "file": "src/detections/check-task.luau",
+      "category": "detections",
+      "difficulty": "medium",
+      "tags": ["detection", "runtime", "task", "coroutine"],
+      "description": "Re-enters itself via task.spawn and verifies coroutine introspection."
+    },
+    {
+      "file": "src/detections/check-workspace.luau",
+      "category": "detections",
+      "difficulty": "easy",
+      "tags": ["detection", "runtime", "roblox", "services"],
+      "description": "Checks game:GetService(\"Workspace\") is raw-equal to game.Workspace."
+    },
+    {
+      "file": "src/detections/check-localplayer.luau",
+      "category": "detections",
+      "difficulty": "easy",
+      "tags": ["detection", "runtime", "roblox", "players"],
+      "description": "Asserts the first player in Players:GetPlayers() is the LocalPlayer."
+    },
+    {
+      "file": "src/detections/check-player.luau",
+      "category": "detections",
+      "difficulty": "easy",
+      "tags": ["detection", "runtime", "roblox", "players"],
+      "description": "Checks GetPlayerByUserId(1) returns nil since Roblox (user 1) is never in the experience."
     }
   ]
 }
