@@ -1,7 +1,7 @@
 -- underscore-separators.luau
 -- NOTE: Luau does NOT support digit-grouping underscores in numerals.
 -- A conforming parser must REJECT the commented lines below.
--- Kept in the corpus to catch parsers that silently accept them.
+-- Kept in the suite to catch parsers that silently accept them.
 
 local valid = 1000000
 

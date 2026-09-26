@@ -1,6 +1,6 @@
 # Generators
 
-Procedural case generators that produce more corpus files on demand.
+Procedural case generators that produce more suite files on demand.
 
 | Script | Output |
 |--------|--------|

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping grow the corpus!
+Thanks for helping grow the suite!
 
 ## Adding a test case
 

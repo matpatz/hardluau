@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Example harness for benchmarking external tools across the corpus.
+"""Example harness for benchmarking external tools across the suite.
 
 For each tool, run it over every file under src/ and report timing and
 exit status. Tools are expected to accept a file path as their final argument.

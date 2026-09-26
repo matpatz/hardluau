@@ -6,7 +6,7 @@ All notable changes to hardluau.
 
 ### Added
 
-- Initial corpus: syntax, luau-specific, semantic-traps, and
+- Initial suite: syntax, luau-specific, semantic-traps, and
   formatting-extremes categories.
 - `metadata/index.json` and `metadata/schema.json`.
 - `generators/` procedural case generators.

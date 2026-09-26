@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate that every corpus file parses correctly in a reference tool.
+"""Validate that every suite file parses correctly in a reference tool.
 
 Usage:
     python validate_syntax.py [--luau PATH] [--tool {luau-analyze,stylua,lua}]

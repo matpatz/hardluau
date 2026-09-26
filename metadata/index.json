@@ -233,6 +233,13 @@
       "description": "Implicit string-to-number coercions and comparison edge cases."
     },
     {
+      "file": "src/semantic-traps/unm-returns-operand.luau",
+      "category": "semantic-traps",
+      "difficulty": "medium",
+      "tags": ["metamethods", "operators", "semantics"],
+      "description": "A __unm metamethod that returns its operand, with # on a string-key-only table evaluating to 0."
+    },
+    {
       "file": "src/formatting-extremes/minified/zero-whitespace.luau",
       "category": "formatting-extremes",
       "difficulty": "easy",
@@ -259,6 +266,69 @@
       "difficulty": "easy",
       "tags": ["formatting", "line-length"],
       "description": "A single very long line to stress line-length assumptions."
+    },
+    {
+      "file": "src/roblox/Cobalt.luau",
+      "category": "roblox",
+      "difficulty": "hard",
+      "tags": ["roblox", "networking", "http", "spy"],
+      "description": "Runtime network monitor that intercepts Roblox engine traffic."
+    },
+    {
+      "file": "src/roblox/Dex++.luau",
+      "category": "roblox",
+      "difficulty": "hard",
+      "tags": ["roblox", "explorer", "debugging"],
+      "description": "Revival of Moon's Dex with an object explorer and cloneref handling."
+    },
+    {
+      "file": "src/roblox/Dex.luau",
+      "category": "roblox",
+      "difficulty": "hard",
+      "tags": ["roblox", "explorer", "debugging"],
+      "description": "Full debugging suite: object explorer, properties, script viewer, and notebook."
+    },
+    {
+      "file": "src/roblox/infiniteyield.luau",
+      "category": "roblox",
+      "difficulty": "hard",
+      "tags": ["roblox", "admin", "commands"],
+      "description": "All-in-one admin command suite with executor-agnostic fallback shims."
+    },
+    {
+      "file": "src/roblox/Ketamine.luau",
+      "category": "roblox",
+      "difficulty": "hard",
+      "tags": ["roblox", "debugging", "spy", "ui"],
+      "description": "Scriptify-generated debug suite with remote/event/HTTP spies and a memory scanner."
+    },
+    {
+      "file": "src/roblox/simplespy.luau",
+      "category": "roblox",
+      "difficulty": "medium",
+      "tags": ["roblox", "remotes", "hooks"],
+      "description": "Hooks remote events and functions to log arguments and return values."
+    },
+    {
+      "file": "src/roblox/Slayers2.luau",
+      "category": "roblox",
+      "difficulty": "medium",
+      "tags": ["roblox", "game", "automation"],
+      "description": "Game-specific automation for Slayers 2 combat and skill controllers."
+    },
+    {
+      "file": "src/roblox/Vex.luau",
+      "category": "roblox",
+      "difficulty": "medium",
+      "tags": ["roblox", "executor", "security"],
+      "description": "Sweeps risky engine services, commonly used for executor detection and cleanup."
+    },
+    {
+      "file": "src/detections/check-game.luau",
+      "category": "detections",
+      "difficulty": "trivial",
+      "tags": ["detection", "environment", "runtime"],
+      "description": "Probes for the game global to tell Roblox apart from Lune or the luau CLI."
     }
   ]
 }

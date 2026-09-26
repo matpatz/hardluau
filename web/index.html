@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>hardluau — Luau parser stress suite</title>
+<meta name="description" content="Browse the hardluau suite: valid Luau source files that stress-test parsers, formatters, linters, and language servers." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>" />
+<link rel="stylesheet" href="/web/css/styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#entry-list">Skip to entries</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">&gt;_</span>
+      <span class="brand-name">hardluau</span>
+    </div>
+    <div class="search-wrap">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search files, tags, descriptions…  (press /)"
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="Search suite entries"
+      />
+      <kbd class="search-hint">/</kbd>
+    </div>
+    <a class="repo-link" href="https://github.com/" id="repo-link" target="_blank" rel="noopener">source</a>
+  </div>
+  <div class="stats-bar" id="stats-bar" aria-live="polite"></div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <section class="filter-group" aria-labelledby="cat-heading">
+      <h2 id="cat-heading">Category</h2>
+      <div class="chip-list" id="category-filters" role="group" aria-label="Filter by category"></div>
+    </section>
+
+    <section class="filter-group" aria-labelledby="diff-heading">
+      <h2 id="diff-heading">Difficulty</h2>
+      <div class="chip-list" id="difficulty-filters" role="group" aria-label="Filter by difficulty"></div>
+    </section>
+
+    <button class="reset-btn" id="reset-filters" type="button">Clear filters</button>
+
+    <p class="sidebar-note" id="ignored-note">
+      <code>src/roblox/</code> scripts use engine APIs and executor globals,
+      so they only run in a Roblox client; <code>src/detections/</code>
+      scripts report which environment they're running in.
+    </p>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="list-header">
+      <span id="result-count">Loading suite…</span>
+      <div class="list-header-actions">
+        <label for="sort-select" class="sr-only">Sort by</label>
+        <select id="sort-select">
+          <option value="file">Sort: file path</option>
+          <option value="difficulty">Sort: difficulty</option>
+          <option value="category">Sort: category</option>
+        </select>
+      </div>
+    </div>
+
+    <ul class="entry-list" id="entry-list" tabindex="-1"></ul>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <p>No entries match these filters.</p>
+      <button type="button" id="empty-reset">Clear filters</button>
+    </div>
+
+    <div class="error-state" id="error-state" hidden>
+      <p><strong>Couldn't load the suite index.</strong></p>
+      <p id="error-detail"></p>
+    </div>
+  </main>
+</div>
+
+<div class="viewer-backdrop" id="viewer-backdrop" hidden>
+  <div class="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+    <header class="viewer-header">
+      <div class="viewer-heading">
+        <h2 id="viewer-title">&nbsp;</h2>
+        <p class="viewer-path" id="viewer-path"></p>
+      </div>
+      <div class="viewer-actions">
+        <button type="button" id="copy-btn" class="btn">Copy source</button>
+        <button type="button" id="viewer-close" class="btn btn-icon" aria-label="Close (Esc)">✕</button>
+      </div>
+    </header>
+
+    <div class="viewer-meta" id="viewer-meta"></div>
+    <p class="viewer-description" id="viewer-description"></p>
+
+    <div class="viewer-body">
+      <pre class="code-pane" id="code-pane"><code id="code-content"></code></pre>
+      <div class="viewer-loading" id="viewer-loading" hidden>Loading source…</div>
+      <div class="viewer-error" id="viewer-error" hidden></div>
+    </div>
+
+    <footer class="viewer-footer">
+      <button type="button" id="nav-prev" class="btn">&larr; Prev</button>
+      <span class="viewer-footer-hint">↑ / ↓ to navigate · Esc to close</span>
+      <button type="button" id="nav-next" class="btn">Next &rarr;</button>
+    </footer>
+  </div>
+</div>
+
+<template id="entry-template">
+  <li class="entry-row" tabindex="0" role="button">
+    <span class="entry-diff-mark" aria-hidden="true"></span>
+    <div class="entry-main">
+      <span class="entry-file"></span>
+      <p class="entry-desc"></p>
+      <div class="entry-tags"></div>
+    </div>
+    <span class="entry-category-badge"></span>
+  </li>
+</template>
+
+<script src="/web/js/highlight.js"></script>
+<script src="/web/js/app.js"></script>
+</body>
+</html>

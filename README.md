@@ -1,9 +1,9 @@
 # hardluau
 
-hardluau is a curated corpus of Luau source files designed to stress-test
+hardluau is a curated suite of Luau source files designed to stress-test
 parsers, formatters, linters, type checkers, and language servers.
 
-Every file in the corpus is valid Luau that a conforming tool must accept.
+Every file in the suite is valid Luau that a conforming tool must accept.
 
 ## Layout
 
@@ -17,17 +17,17 @@ Every file in the corpus is valid Luau that a conforming tool must accept.
 | `src/detections/` | Environment-detection scripts (Roblox vs Lune vs standalone) |
 | `generators/` | Scripts that procedurally generate more cases |
 | `metadata/` | Machine-readable index (`index.json`) |
-| `tests/` | Sanity harness for validating the corpus |
+| `tests/` | Sanity harness for validating the suite |
 
 ## Goals
 
 1. **Correctness** — parsers must reproduce Luau's grammar exactly.
 2. **Idempotence** — a formatter round-trip should be stable.
-3. **Interoperability** — a single corpus usable across many tools.
+3. **Interoperability** — a single suite usable across many tools.
 
 ## Usage
 
-Validate the corpus against a reference parser:
+Validate the suite against a reference parser:
 
 ```sh
 python tests/validate_syntax.py --luau /path/to/luau-analyze

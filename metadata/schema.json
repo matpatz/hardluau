@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Luau Torture Test Corpus Index",
+  "title": "Luau Torture Test Suite Index",
   "type": "object",
   "required": ["version", "entries"],
   "properties": {
@@ -19,7 +19,7 @@
         "category": {
           "type": "string",
           "enum": ["syntax", "luau-specific", "semantic-traps",
-                   "formatting-extremes"]
+                   "formatting-extremes", "roblox", "detections"]
         },
         "difficulty": {
           "type": "string",

@@ -26,7 +26,7 @@ jobs:
         run: |
           python -c "import json; json.load(open('metadata/index.json')); json.load(open('metadata/schema.json'))"
 
-      - name: Validate corpus syntax
+      - name: Validate suite syntax
         run: python tests/validate_syntax.py --luau luau-analyze
 
       - name: Check headers
