@@ -1,0 +1,264 @@
+{
+  "version": "0.1.0",
+  "entries": [
+    {
+      "file": "src/syntax/operators/precedence-chains.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["operators", "precedence", "bitwise"],
+      "description": "Long mixed operator chains exercising full precedence order."
+    },
+    {
+      "file": "src/syntax/operators/mixed-associativity.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["operators", "associativity"],
+      "description": "Left- and right-associative operators combined in single expressions."
+    },
+    {
+      "file": "src/syntax/operators/compound-assignment.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["operators", "assignment", "side-effects"],
+      "description": "All Luau compound assignment operators, including side-effecting LHS."
+    },
+    {
+      "file": "src/syntax/strings/long-bracket-levels.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["strings", "long-brackets"],
+      "description": "Long bracket strings with nested equal signs and embedded closing brackets."
+    },
+    {
+      "file": "src/syntax/strings/escape-sequences.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["strings", "escapes"],
+      "description": "Every standard Luau string escape including hex, decimal, and \\z."
+    },
+    {
+      "file": "src/syntax/strings/string-interpolation-nested.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["strings", "interpolation"],
+      "description": "Interpolated strings with nested braces and format specifiers."
+    },
+    {
+      "file": "src/syntax/strings/unicode-in-strings.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["strings", "unicode", "utf8"],
+      "description": "UTF-8 strings with multibyte, combining, and astral-plane characters."
+    },
+    {
+      "file": "src/syntax/numbers/hex-and-binary-literals.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["numbers", "literals"],
+      "description": "Hexadecimal and binary integer literals with case variants."
+    },
+    {
+      "file": "src/syntax/numbers/scientific-notation.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["numbers", "literals", "exponent"],
+      "description": "Decimal exponent forms with edge mantissa and exponent cases."
+    },
+    {
+      "file": "src/syntax/numbers/underscore-separators.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["numbers", "literals", "reject"],
+      "description": "Digit-grouping underscores must be rejected; invalid forms are commented."
+    },
+    {
+      "file": "src/syntax/tables/deeply-nested-constructors.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["tables", "constructors", "nesting"],
+      "description": "Table constructors nested many levels deep."
+    },
+    {
+      "file": "src/syntax/tables/mixed-key-styles.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["tables", "keys", "constructors"],
+      "description": "Array, named, string, keyword, boolean, and computed keys in one table."
+    },
+    {
+      "file": "src/syntax/tables/trailing-commas-semicolons.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["tables", "separators"],
+      "description": "Trailing commas and semicolons as separators in table constructors."
+    },
+    {
+      "file": "src/syntax/functions/ambiguous-call-syntax.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["functions", "calls", "sugar"],
+      "description": "String/table call sugar and method calls that parsers commonly confuse."
+    },
+    {
+      "file": "src/syntax/functions/multiple-returns-truncation.luau",
+      "category": "syntax",
+      "difficulty": "hard",
+      "tags": ["functions", "returns", "semantics"],
+      "description": "Multiple return values truncate or expand depending on position."
+    },
+    {
+      "file": "src/syntax/functions/varargs-edge-cases.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["functions", "varargs", "select"],
+      "description": "Vararg edge cases: empty, nested closures, and constructor expansion."
+    },
+    {
+      "file": "src/syntax/functions/method-call-chains.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["functions", "methods", "chaining"],
+      "description": "Long method call chains mixing colon and dot syntax."
+    },
+    {
+      "file": "src/syntax/functions/self-referential-closures.luau",
+      "category": "syntax",
+      "difficulty": "medium",
+      "tags": ["functions", "closures", "recursion"],
+      "description": "Closures capturing themselves or the function being defined."
+    },
+    {
+      "file": "src/syntax/control-flow/deeply-nested-blocks.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["control-flow", "nesting", "scope"],
+      "description": "Many nested do/if/while blocks with shadowed locals."
+    },
+    {
+      "file": "src/syntax/control-flow/continue-edge-cases.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["control-flow", "continue", "loops"],
+      "description": "Continue statements in nested and while loops."
+    },
+    {
+      "file": "src/syntax/comments/comments-inside-expressions.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["comments", "expressions"],
+      "description": "Comments embedded inside expressions and across line breaks."
+    },
+    {
+      "file": "src/syntax/comments/comment-like-strings.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["comments", "strings"],
+      "description": "Strings containing comment-like content and vice versa."
+    },
+    {
+      "file": "src/syntax/identifiers/shadowing-chains.luau",
+      "category": "syntax",
+      "difficulty": "easy",
+      "tags": ["identifiers", "scope", "shadowing"],
+      "description": "Chains of shadowed locals across blocks, params, and loop vars."
+    },
+    {
+      "file": "src/luau-specific/type-annotations/generic-functions.luau",
+      "category": "luau-specific",
+      "difficulty": "medium",
+      "tags": ["types", "generics", "functions"],
+      "description": "Generic functions with type parameters and inferred bounds."
+    },
+    {
+      "file": "src/luau-specific/type-annotations/union-intersection-types.luau",
+      "category": "luau-specific",
+      "difficulty": "medium",
+      "tags": ["types", "union", "intersection"],
+      "description": "Union and intersection type combinators."
+    },
+    {
+      "file": "src/luau-specific/type-annotations/type-aliases-recursive.luau",
+      "category": "luau-specific",
+      "difficulty": "hard",
+      "tags": ["types", "aliases", "recursion"],
+      "description": "Recursive and mutually referential type aliases."
+    },
+    {
+      "file": "src/luau-specific/attributes/native-attribute.luau",
+      "category": "luau-specific",
+      "difficulty": "easy",
+      "tags": ["attributes", "native"],
+      "description": "The @native attribute on a function with --!native mode."
+    },
+    {
+      "file": "src/luau-specific/attributes/deprecated-attribute.luau",
+      "category": "luau-specific",
+      "difficulty": "easy",
+      "tags": ["attributes", "deprecated"],
+      "description": "The @deprecated attribute, whose use emits a warning."
+    },
+    {
+      "file": "src/luau-specific/interpolated-strings/nested-interpolation.luau",
+      "category": "luau-specific",
+      "difficulty": "medium",
+      "tags": ["interpolation", "strings"],
+      "description": "Interpolated strings with nested interpolation and literal braces."
+    },
+    {
+      "file": "src/semantic-traps/metatable-abuse.luau",
+      "category": "semantic-traps",
+      "difficulty": "medium",
+      "tags": ["metatables", "metamethods", "semantics"],
+      "description": "Metatables that redefine indexing, assignment, and locking."
+    },
+    {
+      "file": "src/semantic-traps/metamethod-chains.luau",
+      "category": "semantic-traps",
+      "difficulty": "hard",
+      "tags": ["metatables", "metamethods", "operators"],
+      "description": "Arithmetic and comparison metamethods chained across operators."
+    },
+    {
+      "file": "src/semantic-traps/scope-shadowing.luau",
+      "category": "semantic-traps",
+      "difficulty": "easy",
+      "tags": ["scope", "shadowing", "builtins"],
+      "description": "Locals shadowing globals, builtins, and each other at every scope."
+    },
+    {
+      "file": "src/semantic-traps/coercion-edge-cases.luau",
+      "category": "semantic-traps",
+      "difficulty": "medium",
+      "tags": ["coercion", "comparison", "semantics"],
+      "description": "Implicit string-to-number coercions and comparison edge cases."
+    },
+    {
+      "file": "src/formatting-extremes/minified/zero-whitespace.luau",
+      "category": "formatting-extremes",
+      "difficulty": "easy",
+      "tags": ["formatting", "minified"],
+      "description": "A valid program with all non-essential whitespace removed."
+    },
+    {
+      "file": "src/formatting-extremes/maximal-whitespace.luau",
+      "category": "formatting-extremes",
+      "difficulty": "easy",
+      "tags": ["formatting", "whitespace"],
+      "description": "Excessively padded program with tabs, spaces, and blank lines."
+    },
+    {
+      "file": "src/formatting-extremes/mixed-line-endings.luau",
+      "category": "formatting-extremes",
+      "difficulty": "easy",
+      "tags": ["formatting", "line-endings"],
+      "description": "A valid program mixing LF and CRLF line endings."
+    },
+    {
+      "file": "src/formatting-extremes/extreme-line-length.luau",
+      "category": "formatting-extremes",
+      "difficulty": "easy",
+      "tags": ["formatting", "line-length"],
+      "description": "A single very long line to stress line-length assumptions."
+    }
+  ]
+}

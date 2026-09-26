@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Luau
+        run: |
+          curl -L -o luau.zip https://github.com/luau-lang/luau/releases/latest/download/luau-ubuntu.zip
+          unzip luau.zip
+          echo "$PWD" >> "$GITHUB_PATH"
+
+      - name: Validate metadata
+        run: |
+          python -c "import json; json.load(open('metadata/index.json')); json.load(open('metadata/schema.json'))"
+
+      - name: Validate corpus syntax
+        run: python tests/validate_syntax.py --luau luau-analyze
+
+      - name: Check headers
+        shell: bash
+        run: |
+          missing=0
+          while IFS= read -r f; do
+            head -c 2 "$f" | grep -q -- '--' || { echo "missing header: $f"; missing=1; }
+          done < <(find src -name '*.luau' | sort)
+          exit "$missing"

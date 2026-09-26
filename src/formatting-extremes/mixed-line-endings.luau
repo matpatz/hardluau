@@ -1,0 +1,1 @@
+-- mixed-line-endings.luau\r\n-- A valid program containing a mix of LF and CRLF line endings.\r\n\r\nlocal a = 1\nlocal b = 2\r\nlocal c = a + b\nlocal t = {\n    1,\r\n    2,\n    3,\r\n}\nreturn c, t\n
