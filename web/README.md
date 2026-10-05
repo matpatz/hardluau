@@ -70,6 +70,14 @@ No project settings need to be touched in the dashboard: no framework
 preset, no build command, no output directory override — it's a static
 deploy of the repo root.
 
+`cleanUrls` is deliberately **not** enabled. It remaps `web/index.html` to
+the extensionless path `/web/index`, while a rewrite's destination is
+resolved against the deployment's real filesystem; the `/` →
+`/web/index.html` rewrite then no longer resolves and the site root returns
+`404` (while `/web` still works, which makes the failure look confusing).
+If clean URLs are ever wanted, the rewrite destination has to drop the
+extension at the same time.
+
 ## Keyboard shortcuts
 
 | Key | Action |
